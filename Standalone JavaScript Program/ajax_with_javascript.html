@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery Remove Parent Table Row on Button Click Event - ItSolutionStuff.com</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+   
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td class="id">1</td>
+        <td>Hardik Savani</td>
+        <td>hardik@gmail.com</td>
+        <td><button class="btn-remove">Remove</button></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Vimal Kashiyani</td>
+        <td>vimal@gmail.com</td>
+        <td><button class="btn-remove">Remove</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Harshad Pathak</td>
+        <td>harshad@gmail.com</td>
+        <td><button class="btn-remove">Remove</button></td>
+    </tr>
+</table>
+    
+<script type="text/javascript">
+   
+    $(document).ready(function () {
+   
+        $("body").on("click", ".btn-remove", function(){
+            $(this).closest('tr').remove();
+			console.log('id is '+$(this).find('.id').val());
+        });
+   
+    });
+   
+</script>
+   
+</body>
+</html>
